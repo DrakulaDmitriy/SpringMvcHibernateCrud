@@ -22,13 +22,13 @@ public class UserController {
     @GetMapping("/")
     public String showAllUsers(Model model) {
         model.addAttribute("allUsers", userService.getAllUsers());
-        return "mainPage";
+        return "index";
     }
 
     @GetMapping("/userAdd")
     public String addNewUser(Model model) {
         model.addAttribute("user", new User());
-        return "adduser";
+        return "add_user";
     }
 
     @PostMapping("/userSave")
@@ -46,7 +46,7 @@ public class UserController {
     @GetMapping("/{id}/update")
     public String editUser(Model model, @PathVariable("id") long id) {
         model.addAttribute("user", userService.getUserById(id));
-        return "updateUser";
+        return "update_user";
     }
 
     @PostMapping("/{id}")

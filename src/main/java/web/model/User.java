@@ -16,12 +16,16 @@ public class User {
     @GeneratedValue
     private Long id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "surname")
     private String surname;
 
+    @Column(name = "age")
     private int age;
 
+    @Column(name = "email")
     private String email;
 
     public User(String name, String surname, int age, String email) {

@@ -9,7 +9,6 @@ import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao {
-
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -25,8 +24,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void deleteUser(long id) {
-        User foundUser = entityManager.find(User.class, id);
-        entityManager.remove(foundUser);
+        User someUser = entityManager.find(User.class, id);
+        entityManager.remove(someUser);
     }
 
     @Override
