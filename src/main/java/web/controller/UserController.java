@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import web.model.User;
-import web.sevice.UserService;
+import web.service.UserService;
 
 @Controller
 public class UserController {
